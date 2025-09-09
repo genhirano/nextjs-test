@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  
+          <line x1="135" y1="202" x2="25" y2="268" 
+                stroke="#2fc653" stroke-width="8" opacity="0.8648355620676049"/>
+        
+          <line x1="73" y1="26" x2="225" y2="93" 
+                stroke="#41a1eb" stroke-width="3" opacity="0.9713559733721"/>
+        
+          <line x1="148" y1="126" x2="271" y2="299" 
+                stroke="#549bcc" stroke-width="3" opacity="0.9770051484187117"/>
+        
+          <line x1="202" y1="16" x2="260" y2="45" 
+                stroke="#875966" stroke-width="2" opacity="0.4136703271953394"/>
+        
+          <line x1="10" y1="161" x2="89" y2="253" 
+                stroke="#473a12" stroke-width="2" opacity="0.4758708958654994"/>
+        
+          <line x1="260" y1="280" x2="126" y2="180" 
+                stroke="#ef57cb" stroke-width="3" opacity="0.9763008268431859"/>
+        
+          <line x1="98" y1="262" x2="276" y2="287" 
+                stroke="#17cd0d" stroke-width="2" opacity="0.5789385299311378"/>
+        
+          <line x1="149" y1="104" x2="39" y2="153" 
+                stroke="#8d5ff5" stroke-width="5" opacity="0.5835423853849377"/>
+        
+          <line x1="176" y1="295" x2="162" y2="6" 
+                stroke="#376fd7" stroke-width="8" opacity="0.48485236755492167"/>
+        
+          <line x1="235" y1="146" x2="232" y2="65" 
+                stroke="#c2363f" stroke-width="6" opacity="0.5261085705226547"/>
+        
+          <line x1="100" y1="211" x2="167" y2="18" 
+                stroke="#aae085" stroke-width="4" opacity="0.342646006349583"/>
+        
+          <line x1="300" y1="17" x2="287" y2="205" 
+                stroke="#a6af95" stroke-width="7" opacity="0.5124351503790301"/>
+        
+          <line x1="42" y1="23" x2="139" y2="253" 
+                stroke="#dfaa16" stroke-width="6" opacity="0.8490627050061266"/>
+        
+          <line x1="77" y1="170" x2="251" y2="20" 
+                stroke="#659931" stroke-width="8" opacity="0.661942974863525"/>
+        
+</svg>

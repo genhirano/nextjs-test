@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  
+          <circle cx="106" cy="213" r="32" 
+                  fill="#3fc4eb" opacity="0.3130876210176898"/>
+        
+          <circle cx="243" cy="233" r="55" 
+                  fill="#291792" opacity="0.3854442888760019"/>
+        
+          <circle cx="207" cy="196" r="58" 
+                  fill="#3bcd0c" opacity="0.4675027415649861"/>
+        
+          <circle cx="124" cy="201" r="38" 
+                  fill="#6207db" opacity="0.5890996155239594"/>
+        
+</svg>

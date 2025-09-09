@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  
+          <circle cx="110" cy="87" r="54" 
+                  fill="#cb2df1" opacity="0.4296422561143186"/>
+        
+          <circle cx="202" cy="118" r="22" 
+                  fill="#f0748e" opacity="0.8409382937609384"/>
+        
+          <circle cx="73" cy="122" r="31" 
+                  fill="#085828" opacity="0.48869615976090075"/>
+        
+          <circle cx="95" cy="125" r="30" 
+                  fill="#9ad306" opacity="0.8417705042499943"/>
+        
+          <circle cx="146" cy="121" r="53" 
+                  fill="#492eb7" opacity="0.5940592123648607"/>
+        
+          <circle cx="170" cy="70" r="28" 
+                  fill="#b9b782" opacity="0.607981597913543"/>
+        
+          <circle cx="187" cy="62" r="35" 
+                  fill="#250df2" opacity="0.7589525004727101"/>
+        
+          <circle cx="145" cy="223" r="44" 
+                  fill="#f4ee04" opacity="0.8583177375118103"/>
+        
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  
+          <rect x="178" y="42" width="99" height="54" 
+                fill="#a8c401" opacity="0.30598160828124776" 
+                transform="rotate(353 159 146)"/>
+        
+          <rect x="43" y="125" width="69" height="81" 
+                fill="#0a0f90" opacity="0.8808229065860071" 
+                transform="rotate(356 62 240)"/>
+        
+          <rect x="180" y="190" width="42" height="68" 
+                fill="#f5e9db" opacity="0.7259796164746057" 
+                transform="rotate(32 79 85)"/>
+        
+          <rect x="13" y="150" width="35" height="46" 
+                fill="#0b93aa" opacity="0.3904569325822375" 
+                transform="rotate(240 98 116)"/>
+        
+          <rect x="28" y="160" width="36" height="68" 
+                fill="#c8add3" opacity="0.7333932521391422" 
+                transform="rotate(21 73 95)"/>
+        
+          <rect x="109" y="168" width="97" height="81" 
+                fill="#86a54d" opacity="0.569586891267722" 
+                transform="rotate(121 57 61)"/>
+        
+          <rect x="158" y="118" width="79" height="87" 
+                fill="#e6b7b0" opacity="0.48209132430535484" 
+                transform="rotate(1 89 141)"/>
+        
+          <rect x="57" y="48" width="36" height="52" 
+                fill="#fcb948" opacity="0.6498761507729164" 
+                transform="rotate(22 74 235)"/>
+        
+</svg>
