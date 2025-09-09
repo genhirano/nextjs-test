@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
-  basePath: '/nextjs-test',
+  basePath: isProd ? '/nextjs-test' : '',
+  assetPrefix: isProd ? '/nextjs-test' : '',
   images: {
     unoptimized: true
   }

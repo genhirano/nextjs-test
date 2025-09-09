@@ -1,12 +1,18 @@
 import Image from "next/image";
 
+// Helper function to get the correct image path for GitHub Pages
+const getImagePath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/nextjs-test' : '';
+  return basePath + path;
+};
+
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
-          src="/next.svg"
+          src={getImagePath("/next.svg")}
           alt="Next.js logo"
           width={180}
           height={38}
@@ -34,7 +40,7 @@ export default function Home() {
           >
             <Image
               className="dark:invert"
-              src="/vercel.svg"
+              src={getImagePath("/vercel.svg")}
               alt="Vercel logomark"
               width={20}
               height={20}
@@ -60,7 +66,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/file.svg"
+            src={getImagePath("/file.svg")}
             alt="File icon"
             width={16}
             height={16}
@@ -75,7 +81,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/window.svg"
+            src={getImagePath("/window.svg")}
             alt="Window icon"
             width={16}
             height={16}
@@ -90,7 +96,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="/globe.svg"
+            src={getImagePath("/globe.svg")}
             alt="Globe icon"
             width={16}
             height={16}
