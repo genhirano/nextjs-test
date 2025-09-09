@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  
+          <line x1="83" y1="123" x2="199" y2="272" 
+                stroke="#611967" stroke-width="7" opacity="0.221700159388514"/>
+        
+          <line x1="52" y1="199" x2="168" y2="140" 
+                stroke="#a0ec3e" stroke-width="6" opacity="0.33105298786299553"/>
+        
+          <line x1="227" y1="279" x2="117" y2="161" 
+                stroke="#d501f5" stroke-width="5" opacity="0.34843286662689704"/>
+        
+          <line x1="250" y1="188" x2="41" y2="189" 
+                stroke="#c65ffb" stroke-width="6" opacity="0.7105590600512381"/>
+        
+          <line x1="26" y1="87" x2="54" y2="280" 
+                stroke="#7c9a77" stroke-width="7" opacity="0.5089359155632671"/>
+        
+          <line x1="191" y1="186" x2="93" y2="287" 
+                stroke="#731cf3" stroke-width="7" opacity="0.9507588705246091"/>
+        
+          <line x1="114" y1="213" x2="200" y2="144" 
+                stroke="#ba242a" stroke-width="5" opacity="0.5262831440050739"/>
+        
+          <line x1="125" y1="136" x2="16" y2="224" 
+                stroke="#1cdc39" stroke-width="6" opacity="0.24808938020698934"/>
+        
+</svg>

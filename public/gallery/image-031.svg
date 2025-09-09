@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  
+          <polygon points="29,110 97,284 250,248 293,96 141,188 48,243" fill="#a8d917" 
+                   opacity="0.6145771332189418"/>
+        
+          <polygon points="210,211 229,204 251,205" fill="#617f0d" 
+                   opacity="0.4132127800261554"/>
+        
+          <polygon points="85,293 146,60 67,103 60,215 64,199 6,32" fill="#e0b823" 
+                   opacity="0.6793158781998789"/>
+        
+          <polygon points="131,29 193,167 55,26 64,55" fill="#8ec92a" 
+                   opacity="0.45130015774823795"/>
+        
+          <polygon points="256,28 240,81 34,285" fill="#ba1883" 
+                   opacity="0.6467019616216696"/>
+        
+          <polygon points="280,264 125,281 65,50 299,139" fill="#1bcc83" 
+                   opacity="0.9021076303769799"/>
+        
+</svg>

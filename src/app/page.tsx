@@ -1,4 +1,8 @@
+'use client';
+
+import { useState } from 'react';
 import Image from "next/image";
+import { galleryImages, IMAGES_PER_PAGE, TOTAL_PAGES } from './gallery-data';
 
 // Helper function to get the correct image path for GitHub Pages
 const getImagePath = (path: string) => {
@@ -7,102 +11,122 @@ const getImagePath = (path: string) => {
 };
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src={getImagePath("/next.svg")}
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  // Calculate the images for the current page
+  const startIndex = (currentPage - 1) * IMAGES_PER_PAGE;
+  const endIndex = startIndex + IMAGES_PER_PAGE;
+  const currentImages = galleryImages.slice(startIndex, endIndex);
+  
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  
+  const nextPage = () => {
+    if (currentPage < TOTAL_PAGES) {
+      goToPage(currentPage + 1);
+    }
+  };
+  
+  const prevPage = () => {
+    if (currentPage > 1) {
+      goToPage(currentPage - 1);
+    }
+  };
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      {/* Header */}
+      <header className="bg-white dark:bg-gray-800 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white text-center">
+            Photo Gallery
+          </h1>
+          <p className="text-gray-600 dark:text-gray-300 text-center mt-2">
+            A collection of beautiful abstract art
+          </p>
+        </div>
+      </header>
+
+      {/* Main Gallery */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Pagination Info */}
+        <div className="flex justify-between items-center mb-8">
+          <p className="text-gray-600 dark:text-gray-300">
+            Showing {startIndex + 1}-{Math.min(endIndex, galleryImages.length)} of {galleryImages.length} images
+          </p>
+          <p className="text-gray-600 dark:text-gray-300">
+            Page {currentPage} of {TOTAL_PAGES}
+          </p>
+        </div>
+
+        {/* Image Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+          {currentImages.map((image) => (
+            <div key={image.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="aspect-square p-4">
+                <Image
+                  src={getImagePath(image.src)}
+                  alt={image.title}
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-contain rounded"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-4 pt-0">
+                <h3 className="text-sm font-medium text-gray-900 dark:text-white text-center">
+                  {image.title}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Pagination Controls */}
+        <div className="mt-12 flex items-center justify-center space-x-4">
+          <button
+            onClick={prevPage}
+            disabled={currentPage === 1}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-200"
           >
-            <Image
-              className="dark:invert"
-              src={getImagePath("/vercel.svg")}
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Previous
+          </button>
+          
+          <div className="flex space-x-2">
+            {Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                onClick={() => goToPage(page)}
+                className={`px-3 py-2 rounded-md transition-colors duration-200 ${
+                  currentPage === page
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+          </div>
+          
+          <button
+            onClick={nextPage}
+            disabled={currentPage === TOTAL_PAGES}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-200"
           >
-            Read our docs
-          </a>
+            Next
+          </button>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src={getImagePath("/file.svg")}
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src={getImagePath("/window.svg")}
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src={getImagePath("/globe.svg")}
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <p className="text-center text-gray-600 dark:text-gray-300">
+            Gallery contains {galleryImages.length} unique abstract artworks
+          </p>
+        </div>
       </footer>
     </div>
   );

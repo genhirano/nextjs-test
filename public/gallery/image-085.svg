@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  
+          <line x1="202" y1="260" x2="196" y2="156" 
+                stroke="#3466e7" stroke-width="4" opacity="0.7429714185110987"/>
+        
+          <line x1="50" y1="77" x2="83" y2="154" 
+                stroke="#fcda1d" stroke-width="4" opacity="0.49606389766639936"/>
+        
+          <line x1="71" y1="270" x2="111" y2="134" 
+                stroke="#cd7ae0" stroke-width="4" opacity="0.567034135211396"/>
+        
+          <line x1="184" y1="166" x2="294" y2="202" 
+                stroke="#c8c1f4" stroke-width="6" opacity="0.20051988317461103"/>
+        
+          <line x1="174" y1="190" x2="166" y2="121" 
+                stroke="#2b894f" stroke-width="7" opacity="0.4827010907381231"/>
+        
+          <line x1="104" y1="143" x2="273" y2="187" 
+                stroke="#834f63" stroke-width="8" opacity="0.6053529622562529"/>
+        
+          <line x1="16" y1="166" x2="243" y2="23" 
+                stroke="#99d1f3" stroke-width="3" opacity="0.7771526619173172"/>
+        
+          <line x1="227" y1="47" x2="46" y2="20" 
+                stroke="#e3b3fe" stroke-width="2" opacity="0.7740669689077657"/>
+        
+          <line x1="114" y1="185" x2="113" y2="113" 
+                stroke="#846b0e" stroke-width="2" opacity="0.418541512076874"/>
+        
+          <line x1="269" y1="27" x2="212" y2="180" 
+                stroke="#6bf502" stroke-width="3" opacity="0.4685499272237348"/>
+        
+</svg>
